@@ -51,7 +51,13 @@ def task_3_2(x):
     return out
 
 
-x = 2
-print(task_3_2(x))
+# x = 2
+# print(task_3_2(x))
 
-print(task_3_1(x))
+# print(task_3_1(x))
+
+def task_4(x: int) -> bool:
+    fibonachi = [0, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233]
+    if x in fibonachi:
+        return True
+    return False
