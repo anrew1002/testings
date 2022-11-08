@@ -94,7 +94,6 @@ def task_7(N):
     def del_search(num):
         delit = 1
         output = set()
-
         while delit <= num**0.5:
             if num % delit == 0:
                 output.add(delit)
@@ -103,14 +102,6 @@ def task_7(N):
         return output
     for i in range(1, N+1):
         print(i, del_search(i))
-
-# def task_8(N, M):
-#     pif = [i**2 for i in range(N, M+1)]
-#     print(pif)
-#     for i, a in enumerate(pif, 1):
-#         for j, b in enumerate(pif[i], i+1):
-#             if b+a in pif:
-#                 print(i, j, pif.index(b+a))
 
 
 def task_9(N, M):
@@ -125,4 +116,35 @@ def task_9(N, M):
             print(i)
 
 
-task_9(10, 25)
+# task_9(10, 25)
+
+
+def task_10(N):
+    def del_search(num):
+        delit = 1
+        output = set()
+        while delit <= num**0.5:
+            if num % delit == 0:
+                output.add(delit)
+                output.add(num//delit)
+            delit += 1
+        return output
+
+    num = 1
+    output = []
+    while len(output) < N:
+        flag = True
+        for deli in del_search(num):
+            print(del_search(num))
+            print("1", deli)
+            if num % deli != 0:
+                flag = False
+                break
+        if flag:
+            print(num)
+            output.append(num)
+        num += 1
+    return output
+
+
+print(task_10(3))
