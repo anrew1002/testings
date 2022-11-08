@@ -22,4 +22,22 @@ def task_2():
 
 
 # print(task_2(1.2, 2))
-def task_2_2(*args):
+def task_2_2():
+    numbers = []
+    N = int(input("Введите колво чисел"))
+    while N > 0:
+        a = input()
+
+        try:
+            a = float(a)
+            numbers.append(a)
+        except ValueError:
+            N += 1
+
+        else:
+            N -= 1
+    print(sum(numbers))
+    return sum(numbers)
+
+
+task_2_2()
