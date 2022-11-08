@@ -90,4 +90,19 @@ def task_6(N):
     return sum, even, not_even
 
 
-print(task_6(10))
+def task_7(N):
+    def del_search(num):
+        delit = 1
+        output = set()
+
+        while delit <= num**0.5:
+            if num % delit == 0:
+                output.add(delit)
+                output.add(num//delit)
+            delit += 1
+        return output
+    for i in range(1, N+1):
+        print(i, del_search(i))
+
+
+task_7(10)
