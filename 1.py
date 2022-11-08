@@ -7,5 +7,8 @@ def task_1(a, b, c) -> tuple:
 print(task_1(1, 2, 3))
 
 
-def task_2():
-    pass
+def task_2(a, b):
+    if isinstance(a, (int, float)) or isinstance(b, (int, float)):
+        return a+b
+    else:
+        raise TypeError
