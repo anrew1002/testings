@@ -104,5 +104,25 @@ def task_7(N):
     for i in range(1, N+1):
         print(i, del_search(i))
 
+# def task_8(N, M):
+#     pif = [i**2 for i in range(N, M+1)]
+#     print(pif)
+#     for i, a in enumerate(pif, 1):
+#         for j, b in enumerate(pif[i], i+1):
+#             if b+a in pif:
+#                 print(i, j, pif.index(b+a))
 
-task_7(10)
+
+def task_9(N, M):
+    def is_del(num):
+        for i in str(num):
+            if int(i) == 0 or num % int(i) != 0:
+                return False
+        return True
+
+    for i in range(N, M+1):
+        if is_del(i):
+            print(i)
+
+
+task_9(10, 25)
