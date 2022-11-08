@@ -40,4 +40,18 @@ def task_2_2():
     return sum(numbers)
 
 
-task_2_2()
+def task_3_1(x):
+    return x**5
+
+
+def task_3_2(x):
+    out = 1
+    for i in range(5):
+        out *= x
+    return out
+
+
+x = 2
+print(task_3_2(x))
+
+print(task_3_1(x))
