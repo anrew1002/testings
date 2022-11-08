@@ -57,7 +57,20 @@ def task_3_2(x):
 # print(task_3_1(x))
 
 def task_4(x: int) -> bool:
-    fibonachi = [0, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233]
-    if x in fibonachi:
-        return True
-    return False
+    if x <= 250:
+        fibonachi = [0, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233]
+        if x in fibonachi:
+            return True
+        return False
+
+
+def task_5(month: int):
+    num = month
+    if num <= 2:
+        return "winter"
+    if num <= 5:
+        return "spring"
+    if num <= 8:
+        return "summer"
+    if num <= 11:
+        return "autumn"
