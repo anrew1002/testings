@@ -74,3 +74,20 @@ def task_5(month: int):
         return "summer"
     if num <= 11:
         return "autumn"
+
+
+def task_6(N):
+
+    sum = 0
+    even = 0
+    not_even = 0
+    for i in range(N):
+        sum += i
+        if i % 2 == 0:
+            even += 1
+        else:
+            not_even += 1
+    return sum, even, not_even
+
+
+print(task_6(10))
